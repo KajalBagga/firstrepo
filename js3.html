@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function putdata()
+        {
+            var a,b,c;
+            a= parseInt(document.getElementById("txt1").value);
+            b= parseInt(document.getElementById("txt2").value);
+            if(isNaN(a))
+            {
+                a= 0;
+            }
+            if(isNaN(b))
+            {
+                b= 0;
+            }
+            if(isNaN(c))
+            {
+                c= 0;
+            }
+            c= a*b;
+            document.getElementById("txt3").value = c;
+
+            var d,e,TS;
+            d= parseInt(document.getElementById("txt4").value);
+            e= parseInt(document.getElementById("txt5").value);
+            if(isNaN(d))
+            {
+                d= 0;
+            }
+            if(isNaN(e))
+            {
+                e= 0;
+            }
+            if(isNaN(TS))
+            {
+                TS= 0;
+            }
+            TS= a*b;
+            document.getElementById("txt6").value = TS;
+
+            var x,y,SL;
+            a= parseInt(document.getElementById("txt1").value);
+            d= parseInt(document.getElementById("txt4").value);
+            if(isNaN(x))
+            {
+                x= 0;
+            }
+            if(isNaN(y))
+            {
+                y= 0;
+            }
+            if(isNaN(SL))
+            {
+                SL= 0;
+            }
+            SL= a-d;
+            document.getElementById("txt7").value = SL;
+
+            var b,d,VS;
+            b= parseInt(document.getElementById("txt2").value);
+            d= parseInt(document.getElementById("txt4").value);
+            if(isNaN(a))
+            {
+                b= 0;
+            }
+            if(isNaN(b))
+            {
+                d= 0;
+            }
+            if(isNaN(c))
+            {
+                VS= 0;
+            }
+            VS= b*d;
+            document.getElementById("txt8").value = VS;
+
+            var g,h,p;
+            g= parseInt(document.getElementById("txt5").value);
+            h= parseInt(document.getElementById("txt2").value);
+            if(isNaN(g))
+            {
+                g= 0;
+            }
+            if(isNaN(h))
+            {
+                h= 0;
+            }
+            if(isNaN(p))
+            {
+                p= 0;
+            }
+            p= g-h;
+            document.getElementById("txt9").value = p;
+
+            var p,b,PA;
+            p= parseInt(document.getElementById("txt9").value);
+            b= parseInt(document.getElementById("txt2").value);
+            if(isNaN(p))
+            {
+                p= 0;
+            }
+            if(isNaN(b))
+            {
+                b= 0;
+            }
+            if(isNaN(PA))
+            {
+                PA= 0;
+            }
+            PA= (p/b)*100;
+            document.getElementById("txt10").value = PA;
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Enter Purchase quantity: <input type="text" id="txt1" onkeyup="putdata()"/>
+
+        Enter Purchase price:    <input type="text" id="txt2" onkeyup="putdata()"/>
+
+        Total Purchase:          <input type="text" id="txt3" onkeyup="putdata()"/>
+
+
+        Enter Sales quantity:    <input type="text" id="txt4" onkeyup="putdata()"/>
+
+        Enter Sales price:       <input type="text" id="txt5" onkeyup="putdata()"/>
+
+        Total Sales:             <input type="text" id="txt6" onkeyup="putdata()"/>
+
+
+        Stock Left:              <input type="text" id="txt7" onkeyup="putdata()"/>
+
+
+        Value of Stock:          <input type="text" id="txt8" onkeyup="putdata()"/>
+
+
+        Profit:                  <input type="text" id="txt9" onkeyup="putdata()"/>
+
+
+        Profit in %age:          <input type="text" id="txt10" onkeyup="putdata()"/>
+    </pre>
+</body>
+</html>

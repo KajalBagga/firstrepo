@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: auto;
+        }
+        #box
+        {
+            width: 100%;
+            height: 300px;
+            background-color: navy;
+        }
+        .pink
+        {
+            background-color: rgb(193, 78, 97) !important;
+        }
+        .blue
+        {
+            background-color: rgb(116, 116, 181) !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <input type="button" value="Pink" onclick= "pink()"/>
+    <input type="button" value="Blue" onclick= "blue()"/>
+</body>
+<script>
+    function pink()
+    {
+        document.getElementById("box").className= "pink";
+    }
+    function blue()
+    {
+        document.getElementById("box").className= "blue";
+    }
+</script>
+</html>

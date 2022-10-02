@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getData()
+        {
+            var a,b,c;
+            a = parseInt(document.getElementById("txt1").value);
+            b = parseInt(document.getElementById("txt2").value);
+
+            if(isNaN(a))
+            {
+                a= 0;
+            }
+            if(isNaN(b))
+            {
+                b= 0;
+            }
+            c = a+b;
+            document.getElementById("txt3").value = c;
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Enter the value of A: <input type="text" value="" id="txt1" onkeyup="getData()"/>
+
+        Enter the value of B: <input type="text" value="" id="txt2" onkeyup="getData()"/>
+
+        Answer is:            <input type="text" value="" id="txt3">
+
+        <input type="button" value="click here" onclick="getData()"/>
+    </pre>
+</body>
+</html>

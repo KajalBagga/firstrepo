@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function valid()
+        {
+            var a, b, c;
+
+            a = parseInt(prompt("Enter the value of A:"));
+            b = parseInt(prompt("Enter the value of B:"));
+
+            c= a+b;
+
+            alert("Answer is :" +c)
+            document.getElementById("ans").innerHTML="Answer is"+c;
+            document.getElementById("text1").value= c;
+        }
+    </script>
+</head>
+<body>
+    <h1>Addition of two no.</h1>
+    <input type="submit" value="Click here" onclick="valid()"/>
+
+    <input type="text" value="" id="text1"/>
+
+    <h1 id="ans"></h1>
+</body>
+</html>

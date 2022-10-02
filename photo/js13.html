@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box
+        {
+            width: 650px;
+            height: 650px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        #box p
+        {
+            border: 2px solid black;
+            padding: 10px;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 3;
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body onload="myFun()">
+    <div id="box">
+        <p>
+           1            
+        </p>
+        <p>
+            1            
+         </p>
+    </div>
+    <script>
+        function myFun()
+        {
+            const divElement= document.getElementById("box");
+            for(i=1; i<=5; i++)
+            {
+                for(j=1; j<=5; j++)
+                {
+                    const para= document.createElement("p");
+                    para.innerText= j;
+                    divElement.appendChild(para);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

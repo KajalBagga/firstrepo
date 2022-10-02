@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+        body{
+            background-color: pink;
+        }
+
+        #container {
+            width: 800px;
+            height: 700px;
+            margin: 0 auto;
+            border: 3px dotted black;
+            background-color: lightpink;
+        }
+
+        #btn {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 60px;
+        }
+
+        .headerh1 {
+            margin-left: 5px;
+
+        }
+
+        #fst {
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        #last{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #div{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #ttl{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #pr{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .fst{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .sec{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .thi{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .for{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .five{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        #fst1{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #sec1{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #thi1{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #for1{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #five1{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function Repair() {
+            var a, b, c, d, e, msg, total,per,pos;
+            a = parseInt(document.getElementById("fst1").value);
+            b = parseInt(document.getElementById("sec1").value);
+            c = parseInt(document.getElementById("thi1").value);
+            d = parseInt(document.getElementById("for1").value);
+            e = parseInt(document.getElementById("five1").value);
+            if (a <= 30) {
+                if (b <= 30) {
+                    msg = "Student Fail Hindi and English";
+                }
+                else
+                    if (c <= 30) {
+                        msg = "Student Fail Hindi and Math";
+                    }
+                    else
+                        if (d <= 30) {
+                            msg = "Student Fail Hindi and Science";
+                        }
+                        else
+                            if (e <= 30) {
+                                msg = "Student Fail Hindi and Computer";
+                            }
+                            else {
+                                msg = "Student Re-appear Hindi";
+                            }
+
+            }
+            else
+                if (b <= 30) {
+                    if (c <= 30) {
+                        msg = "Student Fail English and Math";
+                    }
+                    else
+                        if (d <= 30) {
+                            msg = "Student Fail English and Science";
+                        }
+                        else
+                            if (e <= 30) {
+                                msg = "Student Fail English and Computer";
+                            }
+                            else {
+                                msg = "Student Re-appear English";
+                            }
+                }
+                else
+                    if (c <= 30) {
+                        if (d <= 30) {
+                            msg = "Student Fail Math and Science";
+                        }
+                        else
+                            if (e <= 30) {
+                                msg = "Student Fail Math and Computer";
+                            }
+                            else {
+                                msg = "Student Re-appear Math";
+                            }
+
+                    }
+                    else
+                        if (d <= 30) {
+                            if (e <= 30) {
+                                msg = "Student Fail Science and Computer";
+                            }
+                            else {
+                                msg = "Student Re-appear Science";
+                            }
+
+                        }
+                        else
+                            if (e <= 30) {
+                                msg = "Your Re-appeare computer";
+
+                            }
+                            else {
+                                msg = "You pass in all Subjects";
+                                total = a + b + c + d + e;
+                                document.getElementById("last").innerHTML = msg;
+                                document.getElementById("ttl").innerHTML = "Total : "+total;
+                                per=(total/500)*100;
+                                document.getElementById("pr").innerHTML = "percentage:"+per;
+                                if(per>=40&&per<50){
+                                        pos="3rd Position";
+                                        document.getElementById("div").innerHTML=pos;
+                                }
+                                else
+                                if(per>=50&&per<60){
+                                    pos="2nd Position";
+                                    document.getElementById("div").innerHTML=pos;
+                                }
+                                else
+                                if(per>=60&&per<75){
+                                    pos="1st Position";
+                                    document.getElementById("div").innerHTML=pos;
+                                }
+                                else
+                                {
+                                    pos="Merit";
+                                    document.getElementById("div").innerHTML=pos;
+                                }
+                            }
+
+
+
+            document.getElementById("last").innerHTML = msg;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <h1 class="headerh1">
+                Marks Calculation 10th Class Student Fail, Pass and Re-appear-:
+            </h1>
+        </div>
+        <div id="fst">
+            <h3 class="fst">Enter Hindi Marks:-</h3>
+            <input type="text" id="fst1" value="">
+            <h3 class="sec">Enter English Marks:-</h3>
+            <input type="text" id="sec1" value="">
+            <h3 class="thi">Enter Math Marks:-</h3>
+            <input type="text" id="thi1" value="">
+            <h3 class="for">Enter Science Marks:-</h3>
+            <input type="text" id="for1" value="">
+            <h3 class="five">Enter Computer Marks:-</h3>
+            <input type="text" id="five1" value="">
+            <br>
+            <input type="submit" id="btn" value="Submit" onclick="Repair()">
+            <h1 id="last"></h1>
+            <h2 id="ttl"></h2>
+            <h2 id="pr"></h2>
+            <h2 id="div"></h2>
+
+        </div>
+    </div>
+</body>
+
+</html>

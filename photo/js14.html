@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: auto;
+            padding: auto;
+        }
+        #chess-box
+        {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .class-black
+        {
+            width: 75px;
+            height: 75px;
+            background-color: black;
+            float:left;
+            color: white;
+        }
+        .class-white
+        {
+            width: 75px;
+            height: 75px;
+            background-color: white;
+            float:left;
+        }
+    </style>
+</head>
+<body onload="chess()">
+    <div id="chess-box">
+
+    </div>
+</body>
+<script>
+    function chess()
+    {
+        var i,j, t=1;
+        const chessBox = document.getElementById("chess-box");
+        for(i=1; i<=8; i++)
+        {
+            for(j=1; j<=8; j++)
+            {
+                if((i+j)%2==0)
+                {
+                    para= document.createElement("div");
+                    para.innerText= t;
+                    para.classList.add("class-black");
+                    chessBox.appendChild(para);
+                }
+                else
+                {
+                    para= document.createElement("div");
+                    para.innerText= t;
+                    para.classList.add("class-white");
+                    chessBox.appendChild(para);
+                }
+                t++;
+            }
+
+        }
+    }    
+</script>
+</html>
